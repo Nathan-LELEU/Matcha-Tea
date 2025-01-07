@@ -1,3 +1,42 @@
+
+/* Centrer le logo */
+header {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+/* Style du logo */
+.logo img {
+    max-width: 5%;
+    height:5%
+}
+
+/* Style de la navigation */
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centre les éléments de la navigation */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espace entre les éléments */
+}
+
+nav ul li a {
+    color: #2D2B2B;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(111, 255, 75);
+    transform: scale(1.1);
+}
+
 /* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
