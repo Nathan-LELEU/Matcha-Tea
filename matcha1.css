@@ -1,27 +1,46 @@
-
-/* Centrer le logo */
+/* Header avec logo */
 header {
     text-align: center;
-    padding: 20px 0px;
+    padding: 10px 0px;
+    background-color: #f5f5f5;
+    position: fixed;
+    width: 100%;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;      /* Très grand z-index pour passer devant tout */
 }
 
 /* Style du logo */
 .logo img {
     max-width: 5%;
-    height:5%
+    height: 5%;
+}
+
+nav {
+    width: 125px; /* Largeur de la barre de navigation */
+    background-color: #ececec; /* Couleur de fond */
+    position: fixed; /* Reste en place même lors du défilement */
+    height: 100%; /* Prend toute la hauteur de la page */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligne les éléments en haut */
+    align-items: center; /* Centre les éléments horizontalement */
+    padding-top: 125px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Style de la navigation */
 nav ul {
     list-style-type: none;
-    padding: 10px;
+    padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Centre les éléments de la navigation */
+    flex-direction: column; /* Disposition verticale des éléments */
+    justify-content: flex-start;
+    align-items: center;
 }
 
 nav ul li {
-    margin: 0 20px; /* Espace entre les éléments */
+    margin: 35% 0; /* Espace entre les éléments */
 }
 
 nav ul li a {
@@ -30,11 +49,15 @@ nav ul li a {
     font-size: 16px;
     padding: 10px;
     transition: color 0.3s ease, transform 0.3s ease;
+    transform: rotate(270deg); /* Rotation du texte à 90 degrés pour le rendre vertical */
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    display: block;
+    transform-origin: center; /* Assure que la rotation se fait depuis le coin supérieur gauche */
+    margin-left: 2px; /* Ajoute un peu d'espace entre le texte et la bordure */
 }
 
 nav ul li a:hover {
     color: rgb(111, 255, 75);
-    transform: scale(1.1);
 }
 
 /* Styles généraux */
@@ -184,94 +207,84 @@ a {
 }
 
 /* Footer principal */
-footer {
-    background-color: #e6e2d3; /* Couleur naturelle de fond */
-    padding: 40px 20px;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-}
-
-.footer-content {
+.footer-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-navigation,
+.footer-center,
+.footer-contact {
+    width: 30%;
     text-align: center;
 }
 
-.footer-logo img {
-    max-width: 80px;
-    height: auto;
-}
-
-.footer-logo h3 {
-    font-family: 'Pacifico', cursive;
-    color: #468767; /* Vert apaisant */
-    margin-top: 10px;
-}
-
-.footer-columns {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 30px;
-}
-
-.footer-column {
-    flex: 1;
-    margin: 0 10px;
-}
-
-.footer-column h4 {
-    font-size: 1.2rem;
-    color: #468767;
-    margin-bottom: 15px;
-}
-
-.footer-column ul {
-    list-style-type: none;
+.footer-navigation ul,
+.footer-contact ul {
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.footer-column ul li {
-    margin-bottom: 10px;
+.footer-navigation ul li,
+.footer-contact ul li {
+    margin: 10px 0;
 }
 
-.footer-column ul li a {
+.footer-navigation ul li a,
+.footer-contact ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
-.footer-column ul li a:hover {
-    color: #468767; /* Effet au survol */
+.footer-navigation ul li a:hover,
+.footer-contact ul li a:hover {
+    text-decoration: underline;
 }
 
-.footer-column p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.social-links li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-links li a {
-    font-size: 1.2rem;
-    color: #468767;
-    text-decoration: none;
-}
-
-.footer-bottom {
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-    margin-top: 30px;
+/* Footer Button */
+.footer-center {
     text-align: center;
 }
 
-.footer-bottom p {
-    font-size: 0.85rem;
-    color: #555;
+.footer-button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.footer-button:hover {
+    background-color: palegreen;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Footer Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-navigation,
+    .footer-center,
+    .footer-contact {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
