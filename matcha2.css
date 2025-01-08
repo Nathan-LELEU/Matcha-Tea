@@ -1,8 +1,8 @@
 /* Header avec logo */
 header {
     text-align: center;
-    padding: 10px 0px;
-    background-color: #f5f5f5;
+    padding: 4px 0px;
+    background-color: #adff86;
     position: fixed;
     width: 100%;
     box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
@@ -17,7 +17,7 @@ header {
 
 nav {
     width: 125px; /* Largeur de la barre de navigation */
-    background-color: #ececec; /* Couleur de fond */
+    background-color: #e5e5e5; /* Couleur de fond */
     position: fixed; /* Reste en place même lors du défilement */
     height: 100%; /* Prend toute la hauteur de la page */
     display: flex;
@@ -97,20 +97,26 @@ a {
 /* Conteneur parent avec flexbox pour les aligner horizontalement */
 .container {
     display: flex;
+    align-items: center;
+    text-align: center;
     gap: 20px; /* Espace entre les éléments */
     flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    margin-left: 12%;
 }
 
 /* Styles des éléments */
 .encadrement1, .encadrement2, .encadrement3 {
+    margin-top: 2%;
     background-color: white;
     border: 2px;
-    padding: 20px;
+    padding: 4px;
     text-align: center;
     box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
+    width: 300px;
     border-radius: 10px;
     margin-bottom: 20px; /* Ajouter un espacement vertical */
+    align-items: center;
+    margin-left: 5%;
 }
 
 /* Style de l'image */
@@ -131,103 +137,173 @@ a {
 .paragraphe1 {
     font-family: 'Arial', sans-serif;
     text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.paragraphe2 {
+    font-family: 'Arial', sans-serif;
     text-align: center;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-bottom: 5%;
 }
 
-.footer-logo img {
-    max-width: 80px;
-    height: auto;
+.titre {
+    text-align: center;
+    padding-top: 8%;
 }
 
-.footer-logo h3 {
+.contact {
+    text-align: center;
+    padding-top: 8%;
+}
+
+h3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre au texte */
+    font-size: 25px;
     font-family: 'Pacifico', cursive;
-    color: #468767; /* Vert apaisant */
-    margin-top: 10px;
 }
 
-.footer-columns {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 30px;
+
+
+
+
+/* Conteneur principal du formulaire */
+.contenue {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.footer-column {
-    flex: 1;
-    margin: 0 10px;
-}
 
-.footer-column h4 {
-    font-size: 1.2rem;
-    color: #468767;
+/* Style des groupes de champs du formulaire */
+.form-group {
     margin-bottom: 15px;
 }
 
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+/* Style des labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.footer-column ul li {
-    margin-bottom: 10px;
+/* Style des champs de saisie */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.footer-column ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
+/* Style de la zone de texte (message) */
+textarea {
+    height: 150px;
 }
 
-.footer-column ul li a:hover {
-    color: #468767; /* Effet au survol */
+/* Style du bouton de validation */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.footer-column p {
-    font-size: 0.9rem;
-    color: #555;
+button:hover {
+    background-color: #0056b3;
 }
 
-.social-links li {
-    display: inline-block;
-    margin: 0 10px;
+/* Footer principal */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #000;
+    color: #fff;
 }
 
-.social-links li a {
-    font-size: 1.2rem;
-    color: #468767;
-    text-decoration: none;
-}
-
-.footer-bottom {
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-    margin-top: 30px;
+.footer-navigation,
+.footer-center,
+.footer-contact {
+    width: 30%;
     text-align: center;
 }
 
-.footer-bottom p {
-    font-size: 0.85rem;
-    color: #555;
+.footer-navigation ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navigation ul li,
+.footer-contact ul li {
+    margin: 10px 0;
+}
+
+.footer-navigation ul li a,
+.footer-contact ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-navigation ul li a:hover,
+.footer-contact ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Button */
+.footer-center {
+    text-align: center;
+}
+
+.footer-button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.footer-button:hover {
+    background-color: palegreen;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Footer Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-navigation,
+    .footer-center,
+    .footer-contact {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
